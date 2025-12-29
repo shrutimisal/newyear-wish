@@ -1,14 +1,10 @@
 "use client";
 import { useEffect, useState } from "react";
-import { useSearchParams } from "next/navigation";
 
-export default function Memories() {
-  const params = useSearchParams();
-  const name = params.get("name")?.toLowerCase();
-
+export default function Memories({ searchParams }) {
+  const name = searchParams?.name?.toLowerCase();
   const [showWish, setShowWish] = useState(false);
 
-  // 💖 Memories + notes for each friend
   const memories = {
     akanksha: [
       {
@@ -85,7 +81,10 @@ export default function Memories() {
   return (
     <div className="container">
       <div className="card">
-        <h2>Some memories 💖</h2>
+        <h2>Some memories</h2>
+        <p style={{ fontSize: "0.9rem", opacity: 0.85 }}>
+          Just a few memories 🤍
+        </p>
 
         <div className="photos">
           {memories[name].map((item, index) => (
@@ -95,9 +94,7 @@ export default function Memories() {
                 alt="memory"
                 className="memory-image"
               />
-              <div className="memory-note">
-                {item.note}
-              </div>
+              <div className="memory-note">{item.note}</div>
             </div>
           ))}
         </div>
