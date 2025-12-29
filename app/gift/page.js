@@ -1,14 +1,12 @@
 "use client";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 
-export default function GiftPage() {
+export default function GiftPage({ searchParams }) {
   const [opened, setOpened] = useState(false);
   const router = useRouter();
-  const params = useSearchParams();
 
-  // ✅ GET NAME FROM URL
-  const name = params.get("name");
+  const name = searchParams?.name;
 
   const openGift = () => {
     setOpened(true);
@@ -17,7 +15,6 @@ export default function GiftPage() {
     }, 1800);
   };
 
-  // Optional safety check
   if (!name) {
     return (
       <div className="container">
@@ -41,7 +38,7 @@ export default function GiftPage() {
           🎁
         </div>
 
-        {opened && <p>Opening magic... ✨</p>}
+        {opened && <p>Opening memories… ✨</p>}
       </div>
     </div>
   );
