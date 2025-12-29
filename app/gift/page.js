@@ -1,45 +1,8 @@
-"use client";
-import { useRouter } from "next/navigation";
-import { useState } from "react";
+import GiftClient from "./GiftClient";
 
-export default function GiftPage({ searchParams }) {
-  const [opened, setOpened] = useState(false);
-  const router = useRouter();
+export default async function GiftPage({ searchParams }) {
+  const params = await searchParams;   // ✅ unwrap Promise
+  const name = params?.name;
 
-  const name = searchParams?.name;
-
-  const openGift = () => {
-    setOpened(true);
-    setTimeout(() => {
-      router.push(`/memories?name=${name}`);
-    }, 1800);
-  };
-
-  if (!name) {
-    return (
-      <div className="container">
-        <div className="card">
-          <p>Invalid access ❌</p>
-        </div>
-      </div>
-    );
-  }
-
-  return (
-    <div className="container">
-      <div className="card">
-        <h2>One last thing 🎁</h2>
-        <p>Tap the gift box to see some memories I wanted to share 💗</p>
-
-        <div
-          className={`gift ${opened ? "open" : ""}`}
-          onClick={openGift}
-        >
-          🎁
-        </div>
-
-        {opened && <p>Opening memories… ✨</p>}
-      </div>
-    </div>
-  );
+  return <GiftClient name={name} />;
 }
