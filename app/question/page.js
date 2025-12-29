@@ -1,12 +1,10 @@
 "use client";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 
-export default function Question() {
+export default function Question({ searchParams }) {
   const router = useRouter();
-  const params = useSearchParams();
-  const name = params.get("name")?.toLowerCase();
-
+  const name = searchParams?.name?.toLowerCase();
   const [error, setError] = useState("");
 
   // Data based on person
@@ -25,7 +23,7 @@ export default function Question() {
     },
   };
 
-  if (!data[name]) {
+  if (!name || !data[name]) {
     return (
       <div className="container">
         <div className="card">
@@ -43,11 +41,14 @@ export default function Question() {
     }
   };
 
+  const displayName =
+    name.charAt(0).toUpperCase() + name.slice(1);
+
   return (
     <div className="container">
       <div className="card">
-        <h2>Hey {name.charAt(0).toUpperCase() + name.slice(1)} 💖</h2>
-        <p>Let's see how much you know me..</p>
+        <h2>Hey {displayName} 💖</h2>
+        <p>Let’s see how much you know me…</p>
         <p>How is your number saved in my phone?</p>
 
         <div className="options">
