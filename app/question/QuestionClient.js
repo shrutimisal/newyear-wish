@@ -33,7 +33,7 @@ export default function QuestionClient({ name }) {
 
   const handleSelect = (option) => {
     if (option === data[name].correct) {
-      router.push(`/gift?name=${name}`);
+      router.push(`/ask?name=${name}`);
     } else {
       setError("Wrong one 😝 Choose again!");
     }
