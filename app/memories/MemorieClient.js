@@ -18,6 +18,18 @@ export default function MemoriesClient({ name }) {
         image: "3a.jpeg",
         note: "Some people just make everything brighter — that’s you 🌸",
       },
+      {
+        image: "4a.jpeg",
+        note: "Don't forget to always hold hold my hand 🌸",
+      },
+      {
+        image: "5a.jpeg",
+        note: "Always keep shining, like you always do ✨",
+      },
+      {
+        image: "cm.jpeg",
+        note: "Grateful for this bond , a lots of kisses for you 🤍",
+      },
     ],
 
     mansi: [
@@ -30,12 +42,16 @@ export default function MemoriesClient({ name }) {
         note: "Smiles that feel safe. ✨",
       },
       {
-        image: "3.jpeg",
-        note: "Life feels lighter when you’re around 🌷",
+        image: "3m.jpeg",
+        note: "Life feels lighter when you’re around, Be my Dance partner always 🌷",
       },
       {
-        image: "4.jpeg",
-        note: "So thankful for you — today and always 💖",
+        image: "4m.jpeg",
+        note: "So thankful for you — today and always💖",
+      },
+      {
+        image: "cm.jpeg",
+        note: "Grateful for this bond , a lots of kisses for you 🤍",
       },
     ],
 
@@ -49,16 +65,16 @@ export default function MemoriesClient({ name }) {
         note: "Strong, kind, and beautiful — just like this memory 💫",
       },
       {
-        image: "3.jpeg",
+        image: "3d.jpeg",
         note: "Every shared moment feels special with you 💕",
       },
       {
-        image: "4.jpeg",
+        image: "4d.jpeg",
         note: "You bring warmth wherever you go 🌸",
       },
       {
-        image: "5.jpeg",
-        note: "Grateful for a bond that only grows stronger 🤍",
+        image: "cm.jpeg",
+        note: "Grateful for this bond , a lots of kisses for you 🤍",
       },
     ],
   };
@@ -80,10 +96,10 @@ export default function MemoriesClient({ name }) {
   return (
     <div className="container">
       <div className="card">
-        <h2>Some memories</h2>
-        <p style={{ fontSize: "0.9rem", opacity: 0.85 }}>
+        <h2>Some memories 💕</h2>
+        {/* <p style={{ fontSize: "0.9rem", opacity: 0.85 }}>
           Just a few memories 🤍
-        </p>
+        </p> */}
 
         <div className="photos">
           {memories[name].map((item, index) => (
@@ -104,7 +120,13 @@ export default function MemoriesClient({ name }) {
             <p>
               Wishing you a year full of love, growth, and beautiful moments ❤️
             </p>
+            <br></br>
+            <p>
+              Made with ❤️ By your's Shruti!
+            </p>
           </div>
+
+          
         )}
       </div>
     </div>
