@@ -20,7 +20,7 @@ export default function Home() {
   return (
     <div className="container">
       <div className="card">
-        <h1>🎆 New Year Gate 🎆</h1>
+        <h1>🎆 Hey, Buddy 🎆</h1>
         <p>Enter your name to unlock the surprise</p>
 
         <input

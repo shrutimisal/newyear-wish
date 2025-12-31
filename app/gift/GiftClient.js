@@ -26,7 +26,7 @@ export default function GiftClient({ name }) {
   return (
     <div className="container">
       <div className="card">
-        <h2>One last thing 🎁</h2>
+        <h2>Okay Beauty 🎁</h2>
         <p>Tap the gift box to see some memories I wanted to share 💗</p>
 
         <div

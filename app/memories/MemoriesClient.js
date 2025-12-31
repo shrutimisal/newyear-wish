@@ -8,7 +8,7 @@ export default function MemoriesClient({ name }) {
     akanksha: [
       {
         image: "1a.jpeg",
-        note: "This day was simple, but your smile made it special 💕",
+        note: "Even standing with you, feel like home. 💕",
       },
       {
         image: "2a.jpeg",
@@ -23,11 +23,11 @@ export default function MemoriesClient({ name }) {
     mansi: [
       {
         image: "1m.jpeg",
-        note: "You’ve always been a calm place in all the chaos 🤍",
+        note: "In that moment, your shoulder felt like home and my sorrows felt far away. 🤍",
       },
       {
         image: "2m.jpeg",
-        note: "Laughs, talks, and memories I’ll always treasure ✨",
+        note: "Smiles that feel safe. ✨",
       },
       {
         image: "3.jpeg",
